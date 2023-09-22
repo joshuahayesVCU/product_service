@@ -3,7 +3,7 @@ import requests
 def create_product(name, price, quantity):
     new_product = {"name": name, "price": price, "quantity": quantity}
     response = requests.post('http://127.0.0.1:5000/products', json=new_product)
-    data = response.json
+    data = response.json()
     return data
 
 def initalize_data(product_list):
